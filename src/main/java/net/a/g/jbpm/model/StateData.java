@@ -13,7 +13,7 @@ public class StateData implements java.io.Serializable {
 	@org.kie.api.definition.type.Label("Id")
 	private int id;
 	@org.kie.api.definition.type.Label("Date")
-	private java.time.LocalDate date;
+	private java.time.LocalDateTime date;
 	@org.kie.api.definition.type.Label("Name")
 	private java.lang.String name;
 	@org.kie.api.definition.type.Label("Transaction ID")
@@ -30,11 +30,11 @@ public class StateData implements java.io.Serializable {
 		this.id = id;
 	}
 
-	public java.time.LocalDate getDate() {
+	public java.time.LocalDateTime getDate() {
 		return this.date;
 	}
 
-	public void setDate(java.time.LocalDate date) {
+	public void setDate(java.time.LocalDateTime date) {
 		this.date = date;
 	}
 
@@ -54,8 +54,7 @@ public class StateData implements java.io.Serializable {
 		this.txId = txId;
 	}
 
-	public StateData(int id, java.time.LocalDate date, java.lang.String name,
-			java.lang.Long txId) {
+	public StateData(int id, java.time.LocalDateTime date, java.lang.String name, java.lang.Long txId) {
 		this.id = id;
 		this.date = date;
 		this.name = name;
@@ -67,6 +66,4 @@ public class StateData implements java.io.Serializable {
 		return "StateData [id=" + id + ", date=" + date + ", name=" + name + ", txId=" + txId + "]";
 	}
 
-	
-	
 }
