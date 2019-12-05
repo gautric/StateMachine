@@ -10,47 +10,25 @@
 	<packaging>kjar</packaging>
 	<name>StateMachine</name>
 	<description></description>
-	
+
 	<properties>
 		<org.kie.version>7.26.0.Final-redhat-00005</org.kie.version>
 	</properties>
 	<dependencies>
-		<dependency>
-			<groupId>com.fasterxml.jackson.datatype</groupId>
-			<artifactId>jackson-datatype-jsr310</artifactId>
-			<version>2.9.9</version>
-		</dependency>
+
 		<dependency>
 			<groupId>org.kie</groupId>
 			<artifactId>kie-internal</artifactId>
 			<version>${org.kie.version}</version>
 			<scope>provided</scope>
 		</dependency>
-		<dependency>
-			<groupId>org.optaplanner</groupId>
-			<artifactId>optaplanner-core</artifactId>
-			<version>${org.kie.version}</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
-		<dependency>
-			<groupId>org.optaplanner</groupId>
-			<artifactId>optaplanner-persistence-jaxb</artifactId>
-			<version>${org.kie.version}</version>
-			<scope>provided</scope>
-		</dependency>
+
 		<dependency>
 			<groupId>org.kie</groupId>
 			<artifactId>kie-api</artifactId>
 			<version>${org.kie.version}</version>
 			<scope>provided</scope>
 		</dependency>
-
 
 		<dependency>
 			<groupId>org.jbpm</groupId>
@@ -60,53 +38,25 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.jbpm</groupId>
-			<artifactId>jbpm-workitems-core</artifactId>
-			<version>${org.kie.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.jbpm</groupId>
-			<artifactId>jbpm-workitems-webservice</artifactId>
+			<groupId>org.kie.server</groupId>
+			<artifactId>kie-server-client</artifactId>
 			<version>${org.kie.version}</version>
 			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>jcl-over-slf4j</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 
-		<!-- JaxWS dependencies -->
 		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-frontend-jaxws</artifactId>
-			<version>3.2.6</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-transports-http</artifactId>
-			<version>3.2.6</version>
-			<scope>runtime</scope>
-		</dependency>
-
-
-
-		<dependency>
-			<groupId>org.apache.cxf</groupId>
-			<artifactId>cxf-rt-transports-http-jetty</artifactId>
-			<version>3.2.6</version>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>javax.xml.ws</groupId>
-			<artifactId>jaxws-api</artifactId>
-			<version>2.3.1</version>
-			<scope>test</scope>
-		</dependency>
-
-
-		<dependency>
-			<groupId>com.sun.xml.bind</groupId>
-			<artifactId>jaxb-xjc</artifactId>
-			<version>2.2.11</version>
-		</dependency>
 	</dependencies>
 	<build>
 		<plugins>

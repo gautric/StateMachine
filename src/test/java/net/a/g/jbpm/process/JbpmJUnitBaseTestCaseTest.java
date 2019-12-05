@@ -28,9 +28,6 @@ public class JbpmJUnitBaseTestCaseTest extends JbpmJUnitBaseTestCase {
 		RuntimeEngine engine = getRuntimeEngine(EmptyContext.get());
 
 		KieSession ksession = engine.getKieSession();
-		ksession.getWorkItemManager().registerWorkItemHandler("WebService",
-				new org.jbpm.process.workitem.webservice.WebServiceWorkItemHandler(ksession,
-						this.getClass().getClassLoader()));
 		ksession.getWorkItemManager().registerWorkItemHandler("Log",
 				new org.jbpm.process.instance.impl.demo.SystemOutWorkItemHandler());
 
