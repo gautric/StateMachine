@@ -1,0 +1,27 @@
+[
+        [
+            "name" : "Transform",
+            "displayName" : "Transform",
+            "category" : "transform-workitem",
+            "description" : "",
+            "defaultHandler" : "mvel: new org.jbpm.process.workitem.transform.TransformWorkItemHandler()",
+            "documentation" : "transform-workitem/index.html",
+
+            "parameters" : [
+                                "InputObject" : new StringDataType()
+                ,"OutputType" : new StringDataType()
+
+            ],
+            "results" : [
+                                "OutputObject" : new StringDataType()
+
+            ],
+            "mavenDependencies" : [
+                                 "org.jbpm.contrib:transform-workitem:7.26.0.Final"
+
+            ],
+            "icon" : "Transform.png"
+
+        ]
+
+]
