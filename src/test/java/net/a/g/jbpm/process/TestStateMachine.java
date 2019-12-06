@@ -15,9 +15,9 @@ import org.kie.internal.runtime.manager.context.EmptyContext;
 
 import net.a.g.jbpm.model.StateData;
 
-public class JbpmJUnitBaseTestCaseTest extends JbpmJUnitBaseTestCase {
+public class TestStateMachine extends JbpmJUnitBaseTestCase {
 
-	public JbpmJUnitBaseTestCaseTest() {
+	public TestStateMachine() {
 		super(true, true);
 	}
 
